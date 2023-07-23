@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.scss";
 import logout from "../../assets/logout.svg";
-import logo from "../../assets/logo.jpeg";
+import profile from "../../assets/profile.svg";
 
 const Header: React.FC<{}> = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -28,8 +28,9 @@ const Header: React.FC<{}> = () => {
         </div>
       </section>
       <div className="profile">
-        {/* Profil ikonları ve çıkış yap butonu buraya eklenebilir */}
-        <div className="profile-icon"></div>
+        <div className="profile-icon">
+          <img width="100%" height="100%" src={profile} alt="Logo" />
+        </div>
         <button className="logout-button">
           <img width={20} height={20} src={logout} alt="Logo" />
         </button>

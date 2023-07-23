@@ -50,17 +50,22 @@
 
         .profile-icon {
             width: 40px;
+            background-color: #5a5863;
             height: 40px;
-            background-color: #fff;
             border-radius: 50%;
-            margin-right: 10px;
+            margin-right: 1.875rem;
+            &:hover {
+                transition: 0.4s;
+                background-color: #39383b;
+            }
+            cursor: pointer;
         }
     }
 
     .logout-button {
         background-color: #5a5863;
         color: #fff;
-
+        margin-right: 1.875rem;
         border: 1px solid;
         display: flex;
         padding: 8px 16px;
