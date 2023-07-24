@@ -1,7 +1,8 @@
-import React from "react";
+import "../src/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignInPage from "./pages/SignInPage";
 import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           <Route path="/" element={<SignInPage />} />
           {/* Diğer sayfaları burada Route componentleriyle ekleyin */}
         </Routes>
+        <footer className="footer">
+          <Footer />
+        </footer>
       </div>
     </Router>
   );
