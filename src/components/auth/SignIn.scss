@@ -1,0 +1,161 @@
+body {
+    background-color: #080710;
+
+    .sign-in {
+        .sign-up {
+            display: block;
+            height: 50px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px 0px;
+            p {
+                a {
+                    text-decoration: none;
+                    b {
+                        cursor: pointer;
+                        color: #2a2828;
+                    }
+                }
+            }
+        }
+        .background {
+            width: 26.875rem; // 430px / 16px = 26.875rem
+            height: 32.5rem; // 520px / 16px = 32.5rem
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+
+            .shape {
+                height: 12.5rem; // 200px / 16px = 12.5rem
+                width: 12.5rem; // 200px / 16px = 12.5rem
+                position: absolute;
+                border-radius: 50%;
+
+                &:first-child {
+                    background: linear-gradient(#1845ad, #23a2f6);
+                    left: -5rem; // -80px / 16px = -5rem
+                    top: -5rem; // -80px / 16px = -5rem
+                }
+
+                &:last-child {
+                    background: linear-gradient(to right, #ff512f, #f09819);
+                    right: -1.875rem; // -30px / 16px = -1.875rem
+                    bottom: -5rem; // -80px / 16px = -5rem
+                }
+            }
+        }
+
+        form {
+            height: 32.5rem; // 520px / 16px = 32.5rem
+            width: 25rem; // 400px / 16px = 25rem
+            background-color: rgba(255, 255, 255, 0.13);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 0.625rem; // 10px / 16px = 0.625rem
+            backdrop-filter: blur(0.625rem); // 10px / 16px = 0.625rem
+            border: 0.125rem solid rgba(255, 255, 255, 0.1); // 2px / 16px = 0.125rem
+            box-shadow: 2.5rem 2.5rem 2.5rem rgba(8, 7, 16, 0.6); // 40px / 16px = 2.5rem
+            padding: 3.125rem 2.1875rem; // 50px / 16px = 3.125rem, 35px / 16px = 2.1875rem
+
+            * {
+                font-family: "Poppins", sans-serif;
+                color: #ffffff;
+                letter-spacing: 0.03125rem; // 0.5px / 16px = 0.03125rem
+                outline: none;
+                border: none;
+            }
+
+            h3 {
+                font-size: 2rem; // 32px / 16px = 2rem
+                font-weight: 500;
+                line-height: 2.625rem; // 42px / 16px = 2.625rem
+                text-align: center;
+            }
+
+            label {
+                display: block;
+                margin-top: 1.875rem; // 30px / 16px = 1.875rem
+                font-size: 1rem; // 16px / 16px = 1rem
+                font-weight: 500;
+            }
+
+            input {
+                display: block;
+                height: 1.225rem; // 50px / 16px = 3.125rem
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.07);
+                border-radius: 0.1875rem; // 3px / 16px = 0.1875rem
+                padding: 0.625rem 0.625rem; // 10px / 16px = 0.625rem
+                margin-top: 0.5rem; // 8px / 16px = 0.5rem
+                font-size: 0.875rem; // 14px / 16px = 0.875rem
+                font-weight: 300;
+            }
+
+            ::placeholder {
+                color: #e5e5e5;
+            }
+
+            button {
+                margin-top: 3.125rem; // 50px / 16px = 3.125rem
+                width: 100%;
+                background-color: #ffffff;
+                color: #080710;
+                padding: 0.3375rem 0; // 15px / 16px = 0.9375rem
+                font-size: 1.125rem; // 18px / 16px = 1.125rem
+                font-weight: 600;
+
+                cursor: pointer;
+                &:hover {
+                    transition: 0.5s ease;
+                    color: #fff;
+                    background-color: #4a41413b;
+                }
+            }
+
+            .social {
+                margin-top: 1.875rem; // 30px / 16px = 1.875rem
+                display: flex;
+                justify-content: space-between;
+
+                div {
+                    cursor: pointer;
+                    width: 100%; //183PX
+                    border-radius: 0.1875rem; // 3px / 16px = 0.1875rem
+                    padding: 0.3125rem 0.625rem 0.625rem 0.3125rem; // 5px / 16px = 0.3125rem, 10px / 16px = 0.625rem
+                    background-color: #0d0e10;
+                    color: #eaf0fb;
+                    text-align: center;
+                    &:hover {
+                        transition: 0.5s ease;
+                        background-color: #285095;
+                    }
+                }
+                .google-icon {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+                .google {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    border-radius: 5px;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+                i {
+                    margin-right: 0.25rem; // 4px / 16px = 0.25rem
+                }
+            }
+        }
+    }
+}

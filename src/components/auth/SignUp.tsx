@@ -1,4 +1,5 @@
 import React from "react";
+import "./SignUp.scss";
 
 const SignUp: React.FC<{}> = () => {
   // Doğru kullanım: Bir ReactNode döndürüyor
