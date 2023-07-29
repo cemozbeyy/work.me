@@ -1,28 +1,36 @@
 import "../src/App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SignInPage from "./pages/SignInPage";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
-import SignUpPage from "./pages/SignUpPage";
+
+import { ClerkProvider } from "@clerk/clerk-react";
+import DashBoard from "./components/dashboard/Dashboard";
+import SignInPage from "./components/auth/SignIn";
+import SignUpPage from "./components/auth/SignUp";
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <header className="App-header">
-          <Header />
-        </header>
-        <Routes>
-          <Route path="/" element={<SignInPage />} />
-          <Route path="/signup" element={<SignUpPage />} />
+  const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY!;
 
-          {/* Diğer sayfaları burada Route componentleriyle ekleyin */}
-        </Routes>
-        <footer className="footer">
-          <Footer />
-        </footer>
-      </div>
-    </Router>
+  return (
+    <BrowserRouter>
+      <ClerkProvider publishableKey={clerkPubKey}>
+        <div className="App">
+          <header className="App-header">
+            <Header />
+          </header>
+          <Routes>
+            <Route path="/sign-in/*" element={<SignInPage />} />
+
+            <Route path="/sign-up/*" element={<SignUpPage />} />
+            <Route path="/" element={<DashBoard />} />
+          </Routes>
+          <footer className="footer">
+            <Footer />
+          </footer>
+        </div>
+      </ClerkProvider>
+    </BrowserRouter>
   );
 }
 

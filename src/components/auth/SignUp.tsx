@@ -1,9 +1,19 @@
-import React from "react";
-import "./SignUp.scss";
+import { SignUp } from "@clerk/clerk-react";
 
-const SignUp: React.FC<{}> = () => {
-  // Doğru kullanım: Bir ReactNode döndürüyor
-  return <div>SignUp!</div>;
-};
+const SignUpPage = () => (
+  <SignUp
+    appearance={{
+      elements: {
+        rootBox: {
+          fontSize: 24,
+          display: "grid",
+          width: "100%",
+          placeItems: "center",
+          marginTop: "7vh",
+        },
+      },
+    }}
+  />
+);
 
-export default SignUp;
+export default SignUpPage;

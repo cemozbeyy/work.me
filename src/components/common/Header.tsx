@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Header.scss";
-import logout from "../../assets/logout.svg";
-import profile from "../../assets/profile.svg";
+import { UserButton } from "@clerk/clerk-react";
 
 const Header: React.FC<{}> = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -28,12 +27,7 @@ const Header: React.FC<{}> = () => {
         </div>
       </section>
       <div className="profile">
-        <div className="profile-icon">
-          <img width="100%" height="100%" src={profile} alt="Logo" />
-        </div>
-        <button className="logout-button">
-          <img width={20} height={20} src={logout} alt="Logo" />
-        </button>
+        <UserButton afterSignOutUrl="/sign-in" />
       </div>
     </header>
   );
