@@ -7,9 +7,10 @@ import chat from "../../assets/chat.svg";
 import profile from "../../assets/profile.svg";
 
 const DashBoardList: React.FC<{}> = () => {
-  const [activeTab, setActiveTab] = useState("choose");
+  const [activeTab, setActiveTab] = useState("Rooms");
 
   const handleTabClick = (tab: string) => {
+    console.log(tab);
     setActiveTab(tab);
   };
   return (
@@ -17,26 +18,26 @@ const DashBoardList: React.FC<{}> = () => {
       <div id="left-side">
         <ul>
           <li
-            className={`choose ${activeTab === "choose" ? "active" : ""}`}
-            onClick={() => handleTabClick("choose")}
+            className={`Rooms ${activeTab === "Rooms" ? "active" : ""}`}
+            onClick={() => handleTabClick("Rooms")}
           >
-            <div className={`icon ${activeTab === "choose" ? "active" : ""}`}>
+            <div className={`icon ${activeTab === "Rooms" ? "active" : ""}`}>
               <img alt="" className="icon" src={voicechat} />
             </div>
             Rooms
           </li>
           <li
-            className={`pay ${activeTab === "pay" ? "active" : ""}`}
-            onClick={() => handleTabClick("pay")}
+            className={`Messages ${activeTab === "Messages" ? "active" : ""}`}
+            onClick={() => handleTabClick("Messages")}
           >
-            <div className={`icon ${activeTab === "pay" ? "active" : ""}`}>
+            <div className={`icon ${activeTab === "Messages" ? "active" : ""}`}>
               <img alt="" className="icon" src={chat} />
             </div>
             Messages
           </li>
           <li
-            className={`wrap ${activeTab === "wrap" ? "active" : ""}`}
-            onClick={() => handleTabClick("wrap")}
+            className={`Profile ${activeTab === "Profile" ? "active" : ""}`}
+            onClick={() => handleTabClick("Profile")}
           >
             <div className={`icon ${activeTab === "pay" ? "active" : ""}`}>
               <img alt="" className="icon" src={profile} />
@@ -44,10 +45,10 @@ const DashBoardList: React.FC<{}> = () => {
             Profile
           </li>
           <li
-            className={`ship ${activeTab === "ship" ? "active" : ""}`}
-            onClick={() => handleTabClick("ship")}
+            className={`Friends ${activeTab === "Friends" ? "active" : ""}`}
+            onClick={() => handleTabClick("Friends")}
           >
-            <div className={`icon ${activeTab === "pay" ? "active" : ""}`}>
+            <div className={`icon ${activeTab === "Friends" ? "active" : ""}`}>
               <img alt="" className="icon" src={friends} />
             </div>
             Friends
