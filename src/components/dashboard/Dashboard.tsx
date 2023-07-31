@@ -1,15 +1,31 @@
 import React from "react";
 import DashBoardList from "./DashBoardList";
 import "../dashboard/Dashboard.scss";
+import { Room } from "../../core/rooms";
 
 const DashBoard: React.FC<{}> = () => {
-  // Doğru kullanım: Bir ReactNode döndürüyor
+  const roomList: Room[] = [
+    { no: 1, id: 1123213, name: "Oda 1" },
+    { no: 2, id: 3123122, name: "Oda 2" },
+    { no: 3, id: 33211145, name: "Oda 3" },
+    // Diğer odaları buraya ekleyin...
+  ];
+
   return (
     <div className="w-100 d-flex">
       <div className="dashboard-list">
         <DashBoardList />
       </div>
-      <div>DashBoard!</div>
+
+      <div className="room-list-container">
+        {roomList.map((room) => (
+          <div key={room.id} className="room-item">
+            <span className="room-no">{room.no} -) </span>
+            <span className="room-name">{room.name}</span>
+            <span className="room-id"> id: {room.id}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

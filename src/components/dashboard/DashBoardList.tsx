@@ -21,7 +21,7 @@ const DashBoardList: React.FC<{}> = () => {
             onClick={() => handleTabClick("choose")}
           >
             <div className={`icon ${activeTab === "choose" ? "active" : ""}`}>
-              <img className="icon" src={voicechat} />
+              <img alt="" className="icon" src={voicechat} />
             </div>
             Rooms
           </li>
@@ -30,7 +30,7 @@ const DashBoardList: React.FC<{}> = () => {
             onClick={() => handleTabClick("pay")}
           >
             <div className={`icon ${activeTab === "pay" ? "active" : ""}`}>
-              <img className="icon" src={chat} />
+              <img alt="" className="icon" src={chat} />
             </div>
             Messages
           </li>
@@ -39,7 +39,7 @@ const DashBoardList: React.FC<{}> = () => {
             onClick={() => handleTabClick("wrap")}
           >
             <div className={`icon ${activeTab === "pay" ? "active" : ""}`}>
-              <img className="icon" src={profile} />
+              <img alt="" className="icon" src={profile} />
             </div>
             Profile
           </li>
@@ -48,7 +48,7 @@ const DashBoardList: React.FC<{}> = () => {
             onClick={() => handleTabClick("ship")}
           >
             <div className={`icon ${activeTab === "pay" ? "active" : ""}`}>
-              <img className="icon" src={friends} />
+              <img alt="" className="icon" src={friends} />
             </div>
             Friends
           </li>
