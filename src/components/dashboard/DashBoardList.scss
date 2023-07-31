@@ -1,0 +1,132 @@
+$gray: #eee;
+$white: #fff;
+$black: #333;
+$active: #e74c3c;
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: block;
+    fill: rgba($black, 0.5);
+    margin-right: 5px;
+    transition: all 0.2s ease-in;
+
+    &.active {
+        fill: $active;
+    }
+
+    &.big {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+#left-side {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    ul {
+        width: 100%;
+
+        li {
+            padding: 20px 10px;
+            display: flex;
+            line-height: 34px;
+            border-bottom: 1px solid $black;
+            color: rgba($black, 0.5);
+            font-weight: 500;
+            cursor: pointer;
+
+            &:hover {
+                color: rgba($black, 1);
+                .icon {
+                    fill: $black;
+                }
+            }
+
+            &.active {
+                transition: 0.3s;
+                color: rgba($black, 1);
+                -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
+                .icon {
+                    fill: $active;
+                }
+            }
+        }
+    }
+}
+
+#border {
+    height: 288px;
+    width: 1px;
+    background-color: rgba($black, 0.2);
+
+    #line {
+        width: 5px;
+        height: 54px;
+        background-color: $active;
+        margin-left: -2px;
+        margin-top: 35px;
+
+        &.two {
+            margin-top: 89px;
+        }
+
+        &.three {
+            margin-top: 143px;
+        }
+
+        &.four {
+            margin-top: 197px;
+        }
+    }
+}
+
+#right-side {
+    height: 300px;
+    width: 75%;
+    overflow: hidden;
+
+    #first,
+    #second,
+    #third,
+    #fourth {
+        position: absolute;
+        height: 300px;
+        width: 75%;
+        margin-top: -350px;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            font-weight: 800;
+            color: $black;
+        }
+
+        p {
+            color: $black;
+            font-weight: 500;
+            padding: 0 30px;
+        }
+    }
+
+    &.active {
+        margin-top: 0px;
+        opacity: 1;
+        transition: all 1s ease-in-out;
+    }
+}
