@@ -1,0 +1,233 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+$green: #86bb71;
+$blue: #94c2ed;
+$orange: #e38968;
+$gray: #92959e;
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    background: #444753;
+}
+
+.people-list {
+    width: 20%;
+    height: 100vh;
+    color: white;
+    margin: 0 auto;
+    .search {
+        padding: 20px;
+    }
+
+    input {
+        border-radius: 3px;
+        border: none;
+        padding: 14px;
+        color: #6a6c75;
+
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .fa-search {
+        position: relative;
+        left: -25px;
+    }
+
+    ul {
+        padding: 20px;
+        height: 100vh;
+
+        li {
+            display: flex;
+            padding-bottom: 20px;
+            .color-one {
+                color: #aed2a6;
+            }
+            .color-two {
+                color: #dae9da;
+            }
+        }
+    }
+
+    .about {
+        margin-top: 8px;
+    }
+
+    .about {
+        padding-left: 8px;
+    }
+
+    .status {
+        color: $gray;
+    }
+}
+
+.chat {
+    width: 80%;
+
+    background: #f2f5f8;
+
+    border-bottom-right-radius: 5px;
+
+    color: #434651;
+
+    .chat-header {
+        padding: 20px;
+        border-bottom: 2px solid white;
+
+        .chat-about {
+            padding-left: 10px;
+            margin-top: 6px;
+        }
+
+        .chat-with {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .chat-num-messages {
+            color: $gray;
+        }
+
+        .fa-star {
+            color: #d8dadf;
+            font-size: 20px;
+            margin-top: 12px;
+        }
+    }
+
+    .chat-history {
+        padding: 0px 30px 20px;
+        border-bottom: 2px solid white;
+        overflow-y: scroll;
+        height: 100vh;
+
+        .message-data {
+            margin-bottom: 15px;
+        }
+
+        .message-data-time {
+            color: lighten($gray, 8%);
+            padding-left: 6px;
+        }
+
+        .message {
+            color: white;
+            padding: 18px 20px;
+            line-height: 26px;
+            font-size: 16px;
+
+            margin-bottom: 30px;
+            width: 90%;
+            position: relative;
+
+            &:after {
+                bottom: 100%;
+                left: 7%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-bottom-color: $green;
+                border-width: 10px;
+                margin-left: -10px;
+            }
+        }
+
+        .my-message {
+            background: $green;
+        }
+
+        .other-message {
+            background: $blue;
+
+            &:after {
+                border-bottom-color: $blue;
+                left: 93%;
+            }
+        }
+    }
+
+    .chat-message {
+        padding: 30px;
+        display: flex;
+        textarea {
+            width: 85%;
+            border: none;
+            padding: 10px;
+            font: 14px/22px "Lato", Arial, sans-serif;
+            resize: none;
+            margin: auto;
+        }
+
+        .fa-file-o,
+        .fa-file-image-o {
+            font-size: 16px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        button {
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            background-image: linear-gradient(to right, #1e1e21, #2b2932);
+
+            &:hover {
+                color: darken(#d9d9d9, 7%);
+                transition: 0.5s;
+                background-color: #353538;
+            }
+        }
+    }
+}
+
+.online,
+.offline,
+.me {
+    margin-right: 3px;
+    font-size: 10px;
+}
+
+.online {
+    color: $green;
+}
+
+.offline {
+    color: $orange;
+}
+
+.me {
+    color: $blue;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.clearfix {
+    list-style-type: none;
+    img {
+        object-fit: contain;
+    }
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}

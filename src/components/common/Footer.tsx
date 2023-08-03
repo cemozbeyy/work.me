@@ -4,7 +4,7 @@ import "./Footer.scss";
 const Footer: React.FC<{}> = () => {
   // Doğru kullanım: Bir ReactNode döndürüyor
   return (
-    <div className="footer">
+    <div className="info-footer">
       <ul>
         <li>
           <a

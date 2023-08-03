@@ -2,9 +2,9 @@ body {
     margin: 0;
     padding: 0;
 
-    .footer {
-        width: 100%;
-        position: fixed;
-        bottom: 0;
+    .info-footer {
+        width: 100% !important;
+
+        bottom: 0 !important;
     }
 }
